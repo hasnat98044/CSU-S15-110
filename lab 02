@@ -1,0 +1,22 @@
+#include <s t d i o . h>
+void t owe r s (int , char , char , char ) ;
+int main ( )
+{
+int num;
+p r i n t f ( ” Enter the number o f d i s k s : ” ) ;
+s c a n f ( ”%d”,&num ) ;
+p r i n t f ( ”The se quence o f moves i n v ol v e d i n the Tower o f Hanoi a r e : \ n” ) ;
+t owe r s (num, ’A ’ , ’C ’ , ’B ’ ) ;
+return 0 ;
+}
+void t owe r s ( int num, char frompeg , char topeg , char auxpeg )
+{
+i f (num==1)
+{
+p r i n t f ( ”\n Move di s k 1 from peg %c t o peg %c ” , frompeg , t ope g ) ;
+return ;
+}
+t owe r s (num−1, frompeg , auxpeg , t ope g ) ;
+p r i n t f ( ”\n Move di s k %d from peg %c t o peg %c ” ,num, frompeg , t ope g ) ;
+t owe r s (num−1, auxpeg , topeg , frompeg ) ;
+}
